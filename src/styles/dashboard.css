@@ -1,0 +1,21 @@
+.dashboard {
+    max-width: 700px;
+    margin: auto;
+  }
+  
+  ul {
+    list-style:none;
+  }
+  
+  li {
+    position: relative;
+    margin: 10px;
+    margin-right: 50px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: 2px solid black;
+    outline: none;
+    font-size: 50px;
+  }
+
+  
