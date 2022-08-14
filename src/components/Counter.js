@@ -27,36 +27,41 @@ function Counter() {
   };
 
   return (
-    <div>
-      <h1 className="counter">
+    <div className="main-component">
+      <div className="counter">
         <div className="time-block">
-          <span className="time">
+          <p className="time-item">
             {counter.hours < 10 ? `0${counter.hours}` : counter.hours}
-          </span>
-          <span className="buttons">
-            <button onClick={() => updateCountDown(3600)}>+</button>
-            <button onClick={() => updateCountDown(-3600)}>-</button>
-          </span>
+          </p>
+          <div className="buttons">
+            <button onClick={() => updateCountDown(3600)}>{"\u{2B9D}"}</button>
+            <button onClick={() => updateCountDown(-3600)}>{"\u{2B9f}"}</button>
+          </div>
+          <p className="text">Hours</p>
         </div>
+        <p className="time-item">:</p>
         <div className="time-block">
-          <span className="time">
-            :{counter.minutes < 10 ? `0${counter.minutes}` : counter.minutes}
-          </span>
-          <span className="buttons">
-            <button onClick={() => updateCountDown(60)}>+</button>
-            <button onClick={() => updateCountDown(-60)}>-</button>
-          </span>
+          <p className="time-item">
+            {counter.minutes < 10 ? `0${counter.minutes}` : counter.minutes}
+          </p>
+          <div className="buttons">
+            <button onClick={() => updateCountDown(60)}>{"\u{2B9D}"}</button>
+            <button onClick={() => updateCountDown(-60)}>{"\u{2B9f}"}</button>
+          </div>
+          <p className="text">Minutes</p>
         </div>
+        <p className="time-item">:</p>
         <div className="time-block">
-          <span className="time">
-            :{counter.seconds < 10 ? `0${counter.seconds}` : counter.seconds}
-          </span>
-          <span className="buttons">
-            <button onClick={() => updateCountDown(1)}>+</button>
-            <button onClick={() => updateCountDown(-1)}>-</button>
-          </span>
+          <p className="time-item">
+            {counter.seconds < 10 ? `0${counter.seconds}` : counter.seconds}
+          </p>
+          <div className="buttons">
+            <button onClick={() => updateCountDown(1)}>{"\u{2B9D}"}</button>
+            <button onClick={() => updateCountDown(-1)}>{"\u{2B9f}"}</button>
+          </div>
+          <p className="text">Seconds</p>
         </div>
-      </h1>
+      </div>
       <Dashboard />
     </div>
   );

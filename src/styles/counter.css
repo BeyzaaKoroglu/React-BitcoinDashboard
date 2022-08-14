@@ -1,29 +1,63 @@
+.main-component {
+  height: 100vh;
+}
+
 .counter {
-    /* display:flex;
-      flex-direction: row; */
-    display: flex;
-    flex-direction: row;
-    max-width: 225px;
-    margin: 20px auto;
-    align-items: center;
-  }
-  
-  .time-block {
-    float: left;
-    display: flex;
-    flex-direction: row;
-    max-width: 300px;
-  }
-  
-  .time {
-    max-width: 45px;
-    margin: 20px auto;
-  }
-  
-  .buttons {
-    max-width: 20px;
-    margin: 20px auto;
-    display: flex;
-    flex-direction: column;
-  }
-  
+  display: flex;
+  flex-direction: row;
+  margin: 0px auto 50px;
+  padding: 30px 150px;
+  max-width: 700px;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+p {
+  margin: 0px 5px;
+}
+
+.time-block {
+  margin: 0 20px;
+}
+
+.time-item {
+  font-size: 70px;
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
+
+.time-block > .time-item {
+  border-radius: 10px 10px 0 0;
+  border-color: rgb(200, 200, 200);
+  border-style: solid;
+  border-width: 2px 2px 0px 2px;
+  background-color: black;
+}
+
+.text {
+  margin-top: 10px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  width: 160px;
+  margin: 0 5px;
+  padding: 0px;
+  background-color: black;
+  border-color: rgb(200, 200, 200);
+  border-style: solid;
+  border-width: 0px 2px 2px 2px;
+  border-radius: 0 0 10px 10px;
+}
+
+button {
+  background-color: rgba(60, 60, 60, 0.5);
+  width: 100%;
+  border-radius: 10px;
+  color: rgb(200, 200, 200);
+}
+
+button:hover {
+  background-color: rgba(60, 60, 60, 0.8);
+}

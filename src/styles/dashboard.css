@@ -1,21 +1,39 @@
 .dashboard {
-    max-width: 700px;
-    margin: auto;
-  }
-  
-  ul {
-    list-style:none;
-  }
-  
-  li {
-    position: relative;
-    margin: 10px;
-    margin-right: 50px;
-    font-size: 18px;
-    border-radius: 10px;
-    border: 2px solid black;
-    outline: none;
-    font-size: 50px;
-  }
+  max-width: 900px;
+  margin: auto;
+  text-align: start;
+}
 
-  
+h1 {
+  margin-bottom: 0px;
+  font-size: 40px;
+  padding-left: 75px;
+}
+
+sup {
+  font-size: 14px;
+}
+
+ul {
+  margin-top: 0px;
+  padding-bottom: 15px;
+  list-style: none;
+}
+
+li {
+  border: 2px solid rgb(200, 200, 200);
+  position: relative;
+  padding-left: 25px;
+  margin: 10px;
+  margin-right: 50px;
+  font-size: 18px;
+  border-radius: 10px;
+  outline: none;
+  font-size: 50px;
+  background-color: black;
+}
+
+.currency {
+  float: right;
+  margin-right: 25px;
+}
