@@ -8,7 +8,7 @@ function Counter() {
 
   useEffect(() => {
     const timer =
-      !(counter.hours <= 0 && counter.minutes <= 0 && counter.seconds <= 0) &&
+      !(counter.hours <= 0 && counter.minutes <= 0 && counter.seconds <= 1) &&
       setInterval(() => setCountDown(countDown - 1), 1000);
 
     setCounter({

@@ -36,6 +36,11 @@ li {
   margin-right: 25px;
 }
 
+.highlight {
+  background-color: rgb(141, 102, 227);
+  color: black;
+}
+
 @media (max-width: 767px) {
   h1 {
     font-size: 35px;

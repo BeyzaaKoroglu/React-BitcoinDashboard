@@ -3,26 +3,37 @@ import axios from "axios";
 import "../styles/dashboard.css";
 
 function Dashboard() {
-  const [data, setData] = useState({ bpi: {} });
   const [bpi, setBpi] = useState([]);
   const [previousValues, setPreviousValues] = useState([]);
+  const [highlight, setHighlight] = useState(false);
 
   async function fetchData() {
     let response = await axios(
       "https://api.coindesk.com/v1/bpi/currentprice.json"
     );
-    if (response.data.bpi.USD.rate_float !== previousValues[0]) {
-      bpi.map((e, index) => {
-        previousValues[index] = e.rate_float;
-        console.log(e);
+    if (
+      response.data.bpi.USD.rate_float !== previousValues[0] ||
+      response.data.bpi.GBP.rate_float !== previousValues[1] ||
+      response.data.bpi.EUR.rate_float !== previousValues[2]
+    ) {
+      if (previousValues.length !== 0) setHighlight(true);
+
+      setPreviousValues([]);
+      bpi.map((e) => {
+        setPreviousValues((arr) => [...arr, e.rate_float]);
       });
-      setData(response.data);
-      setBpi(Object.values(data.bpi));
+      setBpi(Object.values(response.data.bpi));
     }
   }
   useEffect(() => {
     fetchData();
   });
+
+  useEffect(() => {
+    setTimeout(() => {
+      setHighlight(false);
+    }, 3000);
+  }, [bpi]);
 
   const renderRate = (e) => {
     let roundFloat = e.rate_float.toFixed(2);
@@ -37,7 +48,7 @@ function Dashboard() {
       </h1>
       <ul>
         {bpi.map((e, index) => (
-          <li key={index}>
+          <li key={index} className={highlight ? "highlight" : ""}>
             <span>
               {e.code === "USD" ? "$" : e.code === "GBP" ? "£" : "€"}{" "}
             </span>
