@@ -1,12 +1,13 @@
 .main-component {
-  height: 100vh;
+  min-width: 100%;
 }
 
 .counter {
   display: flex;
   flex-direction: row;
   margin: 0px auto 50px;
-  padding: 30px 150px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   max-width: 700px;
   font-size: 20px;
   font-weight: bolder;
@@ -60,4 +61,52 @@ button {
 
 button:hover {
   background-color: rgba(60, 60, 60, 0.8);
+}
+
+@media (max-width: 767px) {
+  .counter {
+    max-width: 480px;
+    font-size: 18px;
+  }
+  .time-block {
+    margin: 0 7px;
+  }
+  .time-item {
+    font-size: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .time-block > .time-item {
+    max-width: 115px;
+  }
+  .buttons {
+    max-width: 115px;
+  }
+  button {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 479px) {
+  .counter {
+    max-width: 280px;
+    font-size: 14px;
+  }
+  .time-block {
+    margin: 0 6px;
+  }
+  .time-item {
+    font-size: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .time-block > .time-item {
+    max-width: 55px;
+  }
+  .buttons {
+    max-width: 55px;
+  }
+  button {
+    font-size: 8px;
+  }
 }
