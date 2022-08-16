@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/React-BitcoinDashboard/static/css/main.42f9208d.css",
+    "main.js": "/React-BitcoinDashboard/static/js/main.01ee192d.js",
+    "static/js/787.c386f9fe.chunk.js": "/React-BitcoinDashboard/static/js/787.c386f9fe.chunk.js",
+    "index.html": "/React-BitcoinDashboard/index.html",
+    "main.42f9208d.css.map": "/React-BitcoinDashboard/static/css/main.42f9208d.css.map",
+    "main.01ee192d.js.map": "/React-BitcoinDashboard/static/js/main.01ee192d.js.map",
+    "787.c386f9fe.chunk.js.map": "/React-BitcoinDashboard/static/js/787.c386f9fe.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.42f9208d.css",
+    "static/js/main.01ee192d.js"
+  ]
+}
